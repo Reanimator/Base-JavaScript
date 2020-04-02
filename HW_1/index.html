@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script async>//async - никто никого не ждет, грузимся как можно быстрее, defer наоборот заставляет скрипт ждать пока страница не загрузится
+        var tempCels = +prompt("Введите температуру в цельсиях");
+        alert("В фаренгейтах это "+((9/5)*tempCels+32));
+        admin = null;
+        
+        name = "Василий";
+        admin = name;
+        document.write(admin+" стал админом. ||||| ");
+        
+        document.write("Выведет вот это - "+1000+"108");
+        
+        var a = +prompt("Введите первую цифру");
+        var b = +prompt("Введите вторую цифру");
+        b = a + b;
+        a = b - a;
+        b = b - a;
+        alert("Теперь первая цифра эта - "+ a +" ,а вторая эта - "+ b)
+    </script>
+</body>
+</html>
