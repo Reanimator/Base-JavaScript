@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var a = 1, b = 1, c, d;
+    c = ++a; alert(c);           // 2 - вначале прибавили к A еще 1, только потом записали результат в D
+    d = b++; alert(d);           // 1 - вначале записали B в D, потом прибавили к B еще 1
+    c = (2+ ++a); alert(c);      // 5 - A было 2, вначале к A прибавили 1 (стало равно 3), потом сложили с 2
+    d = (2+ b++); alert(d);      // 4 - B хоть и не перешло в D c 2, но стало равно 2. Вначале 2 сложилось с B (равное 2), потом стало равно 3
+    alert(a);                    // 3 - тут c = ++a стало равно 2, тут c = (2+ ++a) стало равно 3 и не менялось
+    alert(b);                    // 3 - тут d = b++ стало равно 2, тут d = (2+ b++) стало равно 3 и не менялось
+
+
+
+    var a = 2;
+    var x = 1 + (a *= 2);
+    alert(x); // X равен 5, так как A = 2 возводится в степень 2, что равно 4, потом прибавляется 1
+
+
+
+    if(Math.random().toFixed(0)==0){
+        var a = (Math.random() * (100 - 0)).toFixed(0);
+    }
+    else{
+        var a = (Math.random() * (-100 + 0)).toFixed(0);
+    }
+    if(Math.random().toFixed(0)==0){
+        var b = (Math.random() * (100 - 0)).toFixed(0);
+    }
+    else{
+        var b = (Math.random() * (-100 + 0)).toFixed(0);
+    }
+    if(a>=0 && b>=0){
+        alert("A = "+a+", B = "+b+", A - B = "+(a-b)+" или B - A = "+(b-a));
+    }
+    if(a<0 && b<0){
+        alert("A = "+a+", B = "+b+", A * B = " + (a*b));
+    }
+    if((a<0 && b>=0)||(a>=0 && b<0)){
+        alert("A = "+a+", B = "+b+", A + B = "+(parseInt(a)+parseInt(b)));
+    }
+
+
+
+    var a = (Math.random() * (15 - 0)).toFixed(0); 
+    switch(a){
+        case "0":
+            console.log("0");
+        case "1":
+            console.log("1");
+        case "2":
+            console.log("2");
+        case "3":
+            console.log("3");
+        case "4":
+            console.log("4");
+        case "5":
+            console.log("5");
+        case "6":
+            console.log("6");
+        case "7":
+            console.log("7");
+        case "8":
+            console.log("8");
+        case "9":
+            console.log("9");
+        case "10":
+            console.log("10");
+        case "11":
+            console.log("11");
+        case "12":
+            console.log("12");
+        case "13":
+            console.log("13");
+        case "14":
+            console.log("14");
+        case "15":
+            console.log("15");
+    }
+
+
+
+    function sum(a, b){
+        return(parseInt(a)+parseInt(b))
+    }
+    function raz(a, b){
+        return (a-b)
+    }
+    function pr(a, b){
+        return (a*b)
+    }
+    function del(a, b){
+        return (a/b)
+    }
+    var a = (Math.random() * (100 - 0)).toFixed(0);
+    var b = (Math.random() * (100 - 0)).toFixed(0);
+    console.log("A = "+a+", B = "+b);
+    console.log("A + B = "+ sum(a,b));
+    console.log("A - B = "+ raz(a,b));
+    console.log("A * B = "+ pr(a,b));
+    console.log("A / B = "+ del(a,b));
+
+
+
+    function math(arg1, arg2, operation){
+        switch(operation){
+            case "+":
+                console.log("A = "+a+", B = "+b);
+                console.log("A + B = "+ sum(a,b));
+                break;
+            case "-":
+                console.log("A = "+a+", B = "+b);
+                console.log("A - B = "+ raz(a,b));
+                break;
+            case "*":
+                console.log("A = "+a+", B = "+b);
+                console.log("A * B = "+ pr(a,b));
+                break;
+            case "/":
+                console.log("A = "+a+", B = "+b);
+                console.log("A / B = "+ del(a,b));
+                break;
+            default:
+                console.log("Неверные данные");
+        }
+    }
+    var a = (Math.random() * (100 - 0)).toFixed(0);
+    var b = (Math.random() * (100 - 0)).toFixed(0);
+    switch((Math.random() * (4 - 1) + 1).toFixed(0)){
+        case "1":
+            c="+";
+            break;
+        case "2":
+            c="-";
+            break;
+        case "3":
+            c="*";
+            break;
+        case "4":
+            c="/";
+            break;
+    }
+    math(a,b,c);
+
+
+
+    if(null>0){
+        console.log("null>0")
+    }
+    else{
+        console.log("null!>0")
+    }
+    if(null<0){
+        console.log("null<0")
+    }
+    else{
+        console.log("null!<0")
+    }
+    if(null>=0){
+        console.log("null>=0")
+    }
+    else{
+        console.log("null!>=0")
+    }
+    if(null<=0){
+        console.log("null<=0")
+    }
+    else{
+        console.log("null!<=0")
+    }
+    if(null==0){
+        console.log("null==0")
+    }
+    else{
+        console.log("null!==0")
+    }
+    // True получается только при сравнении >= и <=, насколько я понял это происходит из-за алгоритма обработки, под капотом он проверяет эти операторы наоборот, т.е. если нужно проверить x>=y, он проверяет просто x<y и если там False, то x>=y становится True
+
+    
+    
+    function power(val,pow){
+        if(pow==0){
+            return 1;
+        }
+        if(val==1){
+            return 1;
+        }
+        if(val==0 && pow>0){
+            return 0;
+        }
+        if(val==0 && pow<0){
+            return "бесконечности";
+        }
+        if(pow>0){
+            if(pow>=1){
+                pow -= 1;
+                val *= power(val,pow);
+            }
+            return val;
+        }
+        if(pow<0){
+            if(pow<=-1){
+                if(val>1 || val<-1){
+                    val = 1/val;
+                }
+                pow += 1;
+                val *= power(val,pow);
+            }
+            return val;
+        }
+    }
+    if(Math.random().toFixed(0)==0){
+        var a = parseInt((Math.random() * (10 - 0)).toFixed(0));
+    }
+    else{
+        var a = parseInt((Math.random() * (-10 + 0)).toFixed(0));
+    }
+    if(Math.random().toFixed(0)==0){
+        var b = parseInt((Math.random() * (10 - 0)).toFixed(0));
+    }
+    else{
+        var b = parseInt((Math.random() * (-10 + 0)).toFixed(0));
+    }
+    console.log(a+" в степени "+b+" = "+power(a,b));   
+    </script>
+</body>
+</html>
