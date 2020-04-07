@@ -22,18 +22,8 @@
 
 
 
-    if(Math.random().toFixed(0)==0){
-        var a = (Math.random() * (100 - 0)).toFixed(0);
-    }
-    else{
-        var a = (Math.random() * (-100 + 0)).toFixed(0);
-    }
-    if(Math.random().toFixed(0)==0){
-        var b = (Math.random() * (100 - 0)).toFixed(0);
-    }
-    else{
-        var b = (Math.random() * (-100 + 0)).toFixed(0);
-    }
+    var a = (Math.random() * (-100 - 100) + 100).toFixed(0);
+    var b = (Math.random() * (-100 - 100) + 100).toFixed(0);
     if(a>=0 && b>=0){
         alert("A = "+a+", B = "+b+", A - B = "+(a-b)+" или B - A = "+(b-a));
     }
@@ -213,18 +203,8 @@
             return val;
         }
     }
-    if(Math.random().toFixed(0)==0){
-        var a = parseInt((Math.random() * (10 - 0)).toFixed(0));
-    }
-    else{
-        var a = parseInt((Math.random() * (-10 + 0)).toFixed(0));
-    }
-    if(Math.random().toFixed(0)==0){
-        var b = parseInt((Math.random() * (10 - 0)).toFixed(0));
-    }
-    else{
-        var b = parseInt((Math.random() * (-10 + 0)).toFixed(0));
-    }
+    var a = parseInt((Math.random() * (-10 - 10) + 10).toFixed(0));
+    var b = parseInt((Math.random() * (-10 - 10) + 10).toFixed(0));
     console.log(a+" в степени "+b+" = "+power(a,b));   
     </script>
 </body>
