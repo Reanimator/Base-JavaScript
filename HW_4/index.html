@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function numToObjekt(a){
+            if (a>999){
+                console.log("Число больше 999")
+                ob = {
+                единицы:'',
+                десятки:'',
+                сотни:''
+            }
+                return ob;
+            }
+            ob = {
+                единицы:a % 10,
+                десятки:parseInt(a / 10) % 10,
+                сотни:parseInt(a / 100)
+            }
+            return ob;
+        }
+        var a = (Math.random() * (1500 - 0)).toFixed(0); // больше 999 для отработки исключения
+        console.log(a);
+        var ob = {};
+        console.log(numToObjekt(a));
+    </script>
+</body>
+</html>
