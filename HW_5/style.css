@@ -1,0 +1,74 @@
+* {
+    margin: auto;
+    padding: auto;
+}
+
+table {
+    width: 600px;
+    height: 600px;
+    border: 1px solid #000000;
+    background-image: url(baum.png);
+    margin-top: 20px;
+}
+
+td {
+    width: 10%;
+    height: 10%;
+    border: 1px solid #000000;
+}
+
+.chess tr:nth-child(odd) td:nth-child(odd) {
+	background: #DAA520;
+}
+
+.chess tr:nth-child(even) td:nth-child(even) {
+	background: #DAA520;
+}
+
+.chess tr:nth-last-child(odd) td:nth-last-child(even) {
+	background: #8B4513;
+}
+
+.chess tr:nth-last-child(even) td:nth-last-child(odd) {
+	background: #8B4513;
+}
+
+.inverNot {
+    background-image: url(baum.png)!important;
+    text-align: right;
+    border: 0px solid #FAFAD2;
+    transform: rotate(180deg);
+    font-weight: bold;
+    text-shadow: -1px -2px 1px #696969;
+    font-size: 20px;
+}
+
+.notat {
+    background-image: url(baum.png)!important;
+    text-align: right;
+    border: 0px solid #FAFAD2;
+    font-weight: bold;
+    text-shadow: 1px 2px 1px #696969;
+    font-size: 20px;
+}
+
+.inverNot td {
+    background-image: url(baum.png)!important;
+    text-align: center;
+    vertical-align: top;
+    border: 0px solid #FAFAD2;
+    font-weight: bold;
+}
+
+.notat td {
+    background-image: url(baum.png)!important;
+    text-align: center;
+    vertical-align: top;
+    border: 0px solid #FAFAD2;
+    font-weight: bold;
+}
+
+.figur {
+    font-size: 250%;
+    text-align: center;
+}
