@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Snake</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="buttons">
+            <div class="snake-start">Старт</div>
+            <div class="snake-renew">Новая игра</div>
+        </div>
+        <div>
+            <span>Первоначальная скорость змейки:</span>
+            <select name="begSpeed" id="begSpeed" onchange="changeBegSpeed()">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <div>
+            <span>Интенсивность увеличения скорости:</span>
+            <select name="intSpeed" id="intSpeed" onchange="changeIntSpeed()">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <div>
+            <span>Через сколько корма увеличивается скорость:</span>
+            <select name="probFood" id="probFood" onchange="changeProbFood()">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <div>
+            <span>Количество стен одновременно на площадке:</span>
+            <select name="countProb" id="countProb" onchange="changeCountProb()">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <div id="snake-field"></div>
+        <div class="score">
+            <span class="score-text">Счет: </span><span class="score-point"></span>
+            Скорость: <span id="speed-point"></span>
+        </div>
+        <div class="score">
+
+            <p>P - пауза</p>
+        </div>
+    </div>
+</body>
+</html>
